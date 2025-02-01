@@ -1,17 +1,10 @@
+import Signup from "./signup/page";
 
-"use client"
-import React from 'react'
-import { useState } from 'react'
-
-const page = () => {
-  const [count,setCount] = useState(0)
+export default function page() {
   return (
-    <div>
-      hello how are you <br />{count}
-      <br />
-      <button onClick={()=> {setCount(count+1)}}>Count++</button>
-    </div>
-  )
+    <>
+      hi there <br />
+      <Signup />
+    </>
+  );
 }
-
-export default page
