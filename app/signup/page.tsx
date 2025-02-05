@@ -4,7 +4,7 @@ import axios from "axios";
 import { useState } from "react";
 
 export default function Signup() {
-  const [userName, setUserName] = useState("");
+  const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
   return (
     <div className="flex flex-col justify-center items-center h-screen">
@@ -12,7 +12,7 @@ export default function Signup() {
         className="m-2"
         type="text"
         placeholder="Username"
-        value={userName}
+        value={username}
         onChange={(e) => {
           setUserName(e.target.value);
         }}
@@ -30,7 +30,7 @@ export default function Signup() {
         className="text-white bg-black border rounded-md px-2"
         onClick={() => {
           axios.post("http://localhost:3000/api/user", {
-            userName,
+            username,
             password,
           });
           setPassword("");
